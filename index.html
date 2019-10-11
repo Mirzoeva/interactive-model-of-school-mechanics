@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!--  <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="main.css">
+    <title>School Mechanics Model</title>
+</head>
+<body>
+<!--Панель инструментов на всю ширину страницы-->
+<div class="panel">
+    <h1>School Mechanics Model</h1>
+    <!--Отдел с кнопками для рисования фигур-->
+    <div class="figures">
+        <p> <button class="figure-button" id="line">
+            <img src="img/line.png">
+        </button></p>
+        <p> <button class="figure-button"  id="filledCircle">
+                <img src="img/circl.png">
+        </button></p>
+        <p> <button class="figure-button" id="filledTriangle">
+            <img src="img/triangle.png">
+        </button> </p>
+        <p><button class="figure-button">
+          <img src="img/icon1.png">
+      <!-- не картинка-->
+        </button></p>
+        <!--Canvas_wrapper для задания отступов-->
+    </div>
+    <button onclick="getImage()" class="left">Play</button>
+    <div class="canvas_wrapper">
+        <canvas id="front_canvas" width="1280" height="720">
+            Your browser does not support the drawing
+        </canvas>
+        <canvas id="back_canvas" width="1280" height="720">
+        </canvas>
+    </div>
+    <script src="js/Figure.js"></script>
+    <script src="js/line.js"></script>
+</div>
+<main>
+</main>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* Стили панели интерфейса: панель инструментов, кнопки и тд */
+
+html {
+  font: 14px Arial;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+/*Оформление шапки*/
+header {
+    padding: 3px;
+    background-color: #FFFFFF;
+    text-align: center;
+    height: 10%;
+    width: 7%;
+}
+
+main {
+    position: relative;
+    height: 0%;
+    width: 0%;
+    top: 0%;
+    left: 20%;
+}
+
+h1{
+  z-index: 10000;
+  position: absolute;
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(30,255,188,1);
+  background: rgba(255,255,255,1);
+  transition: color .3s, background .5s;
+  text-align: justify;
+  text-align-last: left;
+  text-decoration: underline;
+  width: 170px;
+  height: 110px;
+}
+
+/*Оформление каждой секции инструментов*/
+.figure-button {
+    position: relative;
+    top: 200px;
+    left: 25px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 3%;
+    height: 3%;
+    float: left;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.thickness-button {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    height: 10%;
+}
+
+
+.figure-button:hover, .thickness-button:hover {
+    border: 1px solid rgba(30,255,188,1);
+    background-color: #FF50E5;
+}
+
+.instrument-button img, .figure-button img {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+}
+
+.figures {
+    left: 19px;
+    width: 5px;
+    top: 150px; /* Расстояние от верхнего края */
+    bottom: 0;
+    position: absolute;
+}
+
+.figure-button {
+    width: 30px;
+    height: 30px;
+}
+
+.figure-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/*Оформление канвасов*/
+.canvas_wrapper {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 1280px;
+    height: 720px;
+    background: #FFFFFF;
+    margin: 8px auto;
+    box-shadow: 6px 6px 10px -2px #B0BEC5;
+    border: 1px solid #ECEFF1;
+}
+
+
+.clear {
+    clear: both;
+    width: 7%;
+    height: 7%;
+}
+
+.left {
+    position: absolute;
+    top: 600px;
+    left: 0px;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 15px 30px;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgba(30,255,188,1);
+    background: rgba(255,255,255,1);
+    transition: color .3s, background .5s;
+}
+.left:hover{
+    animation: stripes .75s infinite linear;
+    background: linear-gradient(45deg, rgba(30,255,188,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(30,255,188,1) 50%,      rgba(30,255,188,1) 75%, rgba(255,255,255,1) 75%, rgba(255,255,255,1));
+    background-size: 10px 10px;
+    color: #FF50E5;
+}
+.left:active{
+    margin: 10px;
+}
