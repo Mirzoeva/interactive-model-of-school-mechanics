@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <!--  <link rel="stylesheet" href="css/reset.css"> -->
-    <link rel="stylesheet" href="main.css">
-    <title>School Mechanics Model</title>
+  <link rel="stylesheet" href="main2.css">
+  <title>School Mechanics Model</title>
 </head>
+<h1>School Mechanics Model</h1>
 <body>
-<!--Панель инструментов на всю ширину страницы-->
-<div class="panel">
-    <h1>School Mechanics Model</h1>
-    <!--Отдел с кнопками для рисования фигур-->
-    <div class="figures">
-        <p> <button class="figure-button" id="line">
-            <img src="img/line.png">
-        </button></p>
-        <p> <button class="figure-button"  id="filledCircle">
-                <img src="img/circl.png">
-        </button></p>
-        <p> <button class="figure-button" id="filledTriangle">
-            <img src="img/triangle.png">
-        </button> </p>
-        <p><button class="figure-button">
-          <img src="img/icon1.png">
-      <!-- не картинка-->
-        </button></p>
-        <!--Canvas_wrapper для задания отступов-->
+  <main>
+    <!--Панель инструментов на всю ширину страницы-->
+    <div id="draw-panel">
+      <!--Отдел с кнопками для рисования фигур-->
+      <div id="left-panel">
+        <input type="radio" alt="Курсор" id="cursor" name="instruments" checked/>
+        <input type="radio" alt="Прямая" id="line" name="instruments"/> 
+        <label for="line"><i class="fa fa-minus fa-lg" aria-hidden="true" style="transform: rotate(-45deg);"></i></label>
+      </div>
+      <button onclick="getImage()" class="left">Play</button>
+      <svg id="svg-panel" width="900" height="600"
+      xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+      <!--В этом месте будут теги svg для рисования векторной графики-->
     </div>
-    <button onclick="getImage()" class="left">Play</button>
-    <div class="canvas_wrapper">
-        <canvas id="front_canvas" width="1280" height="720">
-            Your browser does not support the drawing
-        </canvas>
-        <canvas id="back_canvas" width="1280" height="720">
-        </canvas>
-    </div>
-    <script src="js/Figure.js"></script>
-    <script src="js/line.js"></script>
-</div>
-<main>
-</main>
+  </main>
+  <script src="js/lib.js"></script>
+  <script src="js/handler.js"></script>
+  <script src="js/Figure.js"></script>
+  <script src="js/line.js"></script>
 </body>
 </html>
